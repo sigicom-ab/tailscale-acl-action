@@ -37,7 +37,7 @@ runs:
         exit 1
     - uses: actions/setup-go@v5
       with:
-        go-version: '1.22'
+        go-version: '1.23'
         check-latest: true
         cache: false
 
@@ -50,4 +50,4 @@ runs:
         TS_OAUTH_SECRET: "${{ inputs.oauth-secret }}"
         TS_API_KEY: "${{ inputs.api-key }}"
         TS_TAILNET: "${{ inputs.tailnet }}"
-      run: go run tailscale.com/cmd/gitops-pusher@v1.66.0 "--policy-file=${{ inputs.policy-file }}" "${{ inputs.action }}"
+      run: go run tailscale.com/cmd/gitops-pusher@v1.74.0 "--policy-file=${{ inputs.policy-file }}" "${{ inputs.action }}"
